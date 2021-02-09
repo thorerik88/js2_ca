@@ -1,0 +1,74 @@
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #C0C0C0;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+h2:last-of-type {
+    margin-top: 1.3rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto 2rem;
+}
+
+/* NAV */
+
+.nav a {
+    color: white;
+    opacity: 60%;
+}
+
+/* ARTICLES */
+
+
+.article {
+    position: relative;
+    background-color: white;
+    padding: 1.5rem;
+    margin: 0 auto 1.5rem;
+    box-shadow: 2px 5px 5px rgba(0,0,0,.3);
+    border-radius: 10px;
+    max-width: 250px;
+}
+
+.article span {
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+    font-size: 30px;
+    color: #5cb85c;
+    cursor: pointer;
+}
+
+
+
+/* UI */
+
+a.active {
+    opacity: 100%;
+}
+
+.message-container {
+    margin-left: 1rem;
+}
+
+
+
