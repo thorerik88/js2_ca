@@ -11,19 +11,18 @@ export default function createHtml(json) {
 
     json.forEach((article) => {
         const fav = getFromStorage();
-        let favClass = "fa fa-star-o";
+        let favClass = "fa-star-o";
         if (fav !== null) {
             fav.forEach((item) => {
                 if (item.id === article.id) {
-                    favClass = "fa fa-star";
+                    favClass = "fa-star";
                 }
             }) 
         }
-        
         container.innerHTML += `
             <div class="col-4 article">
                 <h1>Title: ${article.title}</h1>
-                <span class="fav-icon"><i class="${favClass}" data-id="${article.id}"></i></span>
+                <span class="fav-icon"><i class="fa ${favClass}" data-id="${article.id}"></i></span>
                 <h2>Summary:</h2>
                 <p>${article.summary}</p>
                 <h2>Author:</h2>

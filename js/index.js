@@ -8,9 +8,9 @@ const input = document.querySelector("#search-box");
 
 let newList = [];
 
-apiCall();
 
-async function apiCall() {
+
+(async function() {
 
     const url = baseUrl + "articles/";
     
@@ -19,7 +19,7 @@ async function apiCall() {
         const json = await response.json();
         message.innerHTML = "";
         createHtml(json)
-
+        console.log(json)
 
         input.addEventListener("keyup", (e) => {
             newList = json;
@@ -47,7 +47,7 @@ async function apiCall() {
     catch(error) {
         displayMessage("error", "Opps, something went wrong. Error: " + error, ".message-container")
     }
-}
+})()
 
 
 
