@@ -36,6 +36,20 @@ h2:last-of-type {
     opacity: 60%;
 }
 
+.search {
+    display: flex;
+    padding: .5rem 1rem;
+}
+
+.search label {
+    color: white;
+    margin-right: .3rem;
+}
+
+#search-box {
+    border-radius: 5px;
+}
+
 /* ARTICLES */
 
 
