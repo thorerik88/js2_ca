@@ -18,15 +18,15 @@ async function apiCall() {
         const response = await fetch(url);
         const json = await response.json();
         message.innerHTML = "";
-        newList = json;
         createHtml(json)
 
 
         input.addEventListener("keyup", (e) => {
+            newList = json;
             const searchValue = e.target.value.trim().toLowerCase();
             
             if (searchValue.length === 0) {
-                apiCall();
+                createHtml(json)
 
             } else {
                 const filteredArticle = newList.filter((article) => {
@@ -34,7 +34,6 @@ async function apiCall() {
                         return true
                     }
                 })
-
                 newList = filteredArticle;
                 if (newList.length === 0) {
                     displayMessage("warning", "No results", ".article-container");
