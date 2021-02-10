@@ -41,13 +41,14 @@ h2:last-of-type {
     padding: .5rem 1rem;
 }
 
-.search label {
-    color: white;
-    margin-right: .3rem;
-}
-
 #search-box {
     border-radius: 5px;
+    padding-left: .4rem;
+    
+}
+
+#search-box:focus::placeholder {
+    opacity: 0;
 }
 
 /* ARTICLES */
@@ -82,6 +83,19 @@ a.active {
 
 .message-container {
     margin-left: 1rem;
+}
+
+.success {
+    background: lightgreen;
+}
+
+.warning {
+    background-color: yellow;
+}
+
+.error {
+    background-color: darkred;
+    color: white;
 }
 
 
