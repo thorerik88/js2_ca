@@ -2,13 +2,13 @@ import { handleStorage, getFromStorage } from "../utils/storage.js";
 import handleClick from "../utils/handleClick.js";
 
 const container = document.querySelector(".article-container");
-const message = document.querySelector(".message-container");
-const input = document.querySelector("#search-box");
 
+// create and render html to display
 export default function createHtml(json) {
 
     container.innerHTML = "";
 
+    // loop through and render html
     json.forEach((article) => {
         const fav = getFromStorage();
         let favClass = "fa-star-o";
@@ -30,12 +30,14 @@ export default function createHtml(json) {
             </div>
         `;
     })   
-        
+    
+    // get all fav buttons and add event listeners
     const favButton = document.querySelectorAll(".fav-icon");
     favButton.forEach((button) => {
         button.addEventListener("click", function(e) {
             handleClick(e.target);
             handleStorage(e.target.dataset.id)
         })
+       
     })            
 }

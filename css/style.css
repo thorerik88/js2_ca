@@ -38,13 +38,13 @@ h2:last-of-type {
 
 .search {
     display: flex;
-    padding: .5rem 1rem;
 }
 
 #search-box {
     border-radius: 5px;
     padding-left: .4rem;
-    
+    height: 80%;
+    align-self: center;   
 }
 
 #search-box:focus::placeholder {

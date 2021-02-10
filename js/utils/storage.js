@@ -1,8 +1,10 @@
+import displayMessage from "../common/displayMessage.js";
 import { baseUrl } from "../settings/baseUrl.js";
 
 const key = "article";
 let favorites = getFromStorage();
 
+// get API id's and handle storage functions
 export async function handleStorage(id) {
     const url = baseUrl + "articles/" + id;
     
@@ -10,10 +12,13 @@ export async function handleStorage(id) {
         const response = await fetch(url);
         const article = await response.json();
 
+        // check if favs is empty and blindly add to storage
         if (favorites.length === 0) {
             favorites.push(article);
             saveToStorage(favorites);
         } else {
+
+            // return id and push article to array
             const doesExist = favorites.find(function(fav) {
                 return fav.id.toString() === id;
             })
@@ -22,14 +27,18 @@ export async function handleStorage(id) {
                 saveToStorage(favorites);
             } else {
                 removeFromStorage(id)
+                if (location.pathname === "/favorites.html") {
+                    location.href = location.href
+                }
             }
         }
     } 
     catch(error){
-        console.log(error)
+        displayMessage("error", "Opps, something went wrong. Error: " + error + "<br>Please reload page", ".message-container")
     }
 };
 
+// gets all data from localStorage
 export function getFromStorage() {
     const value = JSON.parse(localStorage.getItem(key));
     if (value) {
@@ -38,12 +47,15 @@ export function getFromStorage() {
     return [];
 }
 
-function saveToStorage(article) {
-    localStorage.setItem(key, JSON.stringify(article));
-}
-
-function removeFromStorage(id) {
+// removes data from localStorage
+export function removeFromStorage(id) {
     const filteredList = favorites.filter((item) => item.id.toString() !== id)
     favorites = filteredList;
     saveToStorage(favorites);
 }
+
+// saves data to localStorage
+function saveToStorage(article) {
+    localStorage.setItem(key, JSON.stringify(article));
+}
+
