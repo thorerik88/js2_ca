@@ -84,3 +84,8 @@ function saveToStorage(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
 }
 
+// clear all data
+export function clearAllFavs(key) {
+    localStorage.removeItem(key);
+}
+

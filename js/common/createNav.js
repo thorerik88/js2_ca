@@ -60,10 +60,11 @@ export default function createNav() {
 
     const logoutButton = document.querySelector(".logout");
     if (logoutButton) {
-        const login = document.querySelector(".login").classList += " reverse-order";
+        document.querySelector(".login").classList += " reverse-order";
         logoutButton.addEventListener("click", () => {
             removeFromStorage(tokenKey);
             removeFromStorage(userKey);
         });
     }
 }
+
