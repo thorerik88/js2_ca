@@ -12,7 +12,6 @@ const message = document.querySelector(".message-container");
 (async function() {
     const favorites = getFromStorage(articleKey);
     message.innerHTML = "";
-
     // display message if favs is empty
     if (favorites.length === 0) {
         displayMessage("warning", "No favorites added", ".message-container");

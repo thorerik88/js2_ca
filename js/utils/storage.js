@@ -3,7 +3,7 @@ import displayMessage from "../common/displayMessage.js";
 import { baseUrl } from "../settings/baseUrl.js";
 import { articleKey, tokenKey, userKey } from "../settings/key.js";
 
-let favorites = getFromStorage();
+let favorites = getFromStorage(articleKey);
 
 // get API id's and handle storage functions
 export async function handleStorage(id) {
@@ -32,7 +32,7 @@ export async function handleStorage(id) {
 
                 // remove article from local storage and make sure html is rendered again only in favorites
                 updateStorage(id)
-                const existingList = getFromStorage();
+                const existingList = getFromStorage(articleKey);
                 const pathname = "/favorites.html";
 
                 if (existingList.length === 0 && location.pathname === pathname) {
