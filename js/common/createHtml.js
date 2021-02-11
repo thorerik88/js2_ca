@@ -1,5 +1,6 @@
 import { handleStorage, getFromStorage } from "../utils/storage.js";
 import handleClick from "../utils/handleClick.js";
+import { articleKey } from "../settings/key.js";
 
 const container = document.querySelector(".article-container");
 
@@ -10,7 +11,7 @@ export default function createHtml(json) {
 
     // loop through and render html
     json.forEach((article) => {
-        const fav = getFromStorage();
+        const fav = getFromStorage(articleKey);
         let favClass = "fa-star-o";
         if (fav !== null) {
             fav.forEach((item) => {
