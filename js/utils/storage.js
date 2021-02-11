@@ -29,12 +29,18 @@ export async function handleStorage(id) {
                 saveToStorage(favorites);
 
             } else {
+
+                // remove article from local storage and make sure html is rendered again only in favorites
                 removeFromStorage(id)
                 const existingList = getFromStorage();
-                if (existingList.length === 0) {
+                const pathname = "/favorites.html";
+
+                if (existingList.length === 0 && location.pathname === pathname) {
                     displayMessage("warning", "You have removed all favorites", ".message-container");
                 }
-                createHtml(existingList);
+                if (location.pathname === pathname) {
+                    createHtml(existingList);
+                }
             }
         }
     } 

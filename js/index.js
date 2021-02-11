@@ -19,7 +19,6 @@ let newList = [];
         const json = await response.json();
         message.innerHTML = "";
         createHtml(json)
-        console.log(json)
 
         // filter search term with article items
         input.addEventListener("keyup", (e) => {
