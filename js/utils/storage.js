@@ -1,3 +1,4 @@
+import createHtml from "../common/createHtml.js";
 import displayMessage from "../common/displayMessage.js";
 import { baseUrl } from "../settings/baseUrl.js";
 
@@ -22,14 +23,18 @@ export async function handleStorage(id) {
             const doesExist = favorites.find(function(fav) {
                 return fav.id.toString() === id;
             })
+            
             if (doesExist === undefined) {
                 favorites.push(article)
                 saveToStorage(favorites);
+
             } else {
                 removeFromStorage(id)
-                if (location.pathname === "/favorites.html") {
-                    location.href = location.href
+                const existingList = getFromStorage();
+                if (existingList.length === 0) {
+                    displayMessage("warning", "You have removed all favorites", ".message-container");
                 }
+                createHtml(existingList);
             }
         }
     } 

@@ -73,6 +73,9 @@ h2:last-of-type {
     cursor: pointer;
 }
 
+/* LOGIN */
+
+
 
 
 /* UI */
@@ -84,10 +87,6 @@ a.active {
 .message-container {
     margin-left: 1rem;
     padding: 1rem;
-}
-
-.success {
-    background: lightgreen;
 }
 
 .warning {
