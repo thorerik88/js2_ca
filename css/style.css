@@ -33,6 +33,11 @@ h3 {
     margin: 2rem auto 2rem;
 }
 
+button {
+    border: none !important;
+    box-shadow: 2px 5px 5px rgba(0,0,0,.3);  
+}
+
 /* NAV */
 
 .nav li a, .nav div a {
@@ -98,6 +103,19 @@ h3 {
 .container form {
     width: 50%;
     margin: 2rem auto;
+}
+
+/* ADD/EDIT */
+#add {
+    background-color: #5cb85c;
+}
+
+#edit {
+    background-color: #f0ad4e;
+}
+
+#delete {
+    background-color: #d9534f;
 }
 
 

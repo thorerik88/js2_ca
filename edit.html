@@ -17,7 +17,12 @@
       <div class="message-container"></div>
 
       <form>
-        <h3>Add your book</h3>
+        <h3>Edit or delete your book</h3>
+
+        <div class="mb-3">
+          <label for="id" class="form-label">Book ID</label>
+          <input type="text" class="form-control" id="id" disabled>
+        </div>
         <div class="mb-3">
           <label for="title" class="form-label">Title</label>
           <input type="text" class="form-control" id="title">
@@ -30,11 +35,12 @@
             <label for="author" class="form-label">Author</label>
             <input type="text" class="form-control" id="author">
           </div>
-        <button type="submit" id="add" class="btn btn-primary">Submit</button>
+        <button type="submit" id="edit" class="btn btn-primary">Edit</button>
+        <button type="submit" id="delete" class="btn btn-primary">Delete</button>
       </form>
 
     </div>
 
-    <script src="js/add.js" type="module"></script>
+    <script src="js/edit.js" type="module"></script>
 </body>
 </html>

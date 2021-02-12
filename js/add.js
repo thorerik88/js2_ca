@@ -5,9 +5,6 @@ import { tokenKey } from "./settings/key.js";
 import { getFromStorage } from "./utils/storage.js";
 
 const token = getFromStorage(tokenKey);
-if (token.length === 0) {
-    location.href = "/index.html";
-}
 
 createNav();
 

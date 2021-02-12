@@ -28,6 +28,7 @@ export default function createHtml(json) {
                 <p>${article.summary}</p>
                 <h2>Author:</h2>
                 <p>${article.author}</p>
+                <a href="/edit.html?id=${article.id}" id="edit" class="btn btn-primary">Edit</a>
             </div>
         `;
     })   
@@ -39,6 +40,5 @@ export default function createHtml(json) {
             handleClick(e.target);
             handleStorage(e.target.dataset.id)
         })
-       
-    })            
+    })   
 }

@@ -1,7 +1,7 @@
 import { getFromStorage, removeFromStorage } from "../utils/storage.js";
 import { tokenKey, userKey } from "../settings/key.js";
 
-const container = document.querySelector(".nav");
+
 
 export default function createNav() {
 
@@ -35,11 +35,11 @@ export default function createNav() {
 
         // create, edit and delete as logged in
         addMenu = `<a href="/add.html" class="nav-link ${location.pathname === "/add.html" ? "active" : ""}">Add</a>`;
-        editMenu = `<a href="#" class="nav-link ${logoutClass}${location.pathname === "/edit.html" ? "active" : ""}">Edit</a>`;
+        editMenu = `<a href="/edit.html" class="nav-link ${location.pathname === "/edit.html" ? "active" : ""}">Edit</a>`;
         welcome = `<a class="nav-link">Welcome ${user}</a>`;
     }
 
-
+    const container = document.querySelector(".nav");
     container.innerHTML = `
     <li class="nav-item col-1">
         <a class="nav-link ${location.pathname === home ? "active" : ""}" href="index.html">Home</a>
