@@ -24,6 +24,10 @@ h2:last-of-type {
     margin-top: 1.3rem;
 }
 
+h3 {
+    font-size: 1.1rem;
+}
+
 .container {
     max-width: 900px;
     margin: 2rem auto 2rem;

@@ -34,7 +34,7 @@ export default function createNav() {
         logHref = "index";
 
         // create, edit and delete as logged in
-        addMenu = `<a href="#" class="nav-link ${logoutClass}${location.pathname === "/add.html" ? "active" : ""}">Add</a>`;
+        addMenu = `<a href="/add.html" class="nav-link ${location.pathname === "/add.html" ? "active" : ""}">Add</a>`;
         editMenu = `<a href="#" class="nav-link ${logoutClass}${location.pathname === "/edit.html" ? "active" : ""}">Edit</a>`;
         welcome = `<a class="nav-link">Welcome ${user}</a>`;
     }

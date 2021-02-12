@@ -28,7 +28,7 @@ const input = document.querySelector("#search-box");
         })
     }
     catch(error) {
-        displayMessage("error", "Opps, something went wrong. Error: " + error, ".message-container")
+        displayMessage("error", "Opps, something went wrong.</br> Error: " + error, ".message-container")
     }
 })()
 
