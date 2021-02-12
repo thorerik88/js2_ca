@@ -6,6 +6,7 @@ import { getFromStorage, clearAllFavs } from "./utils/storage.js"
 
 createNav();
 const message = document.querySelector(".message-container");
+const clearButton = document.querySelector(".clear-button");
 
 // get existing favorites on page load
 (async function() {
@@ -14,13 +15,14 @@ const message = document.querySelector(".message-container");
     // display message if favs is empty
     if (favorites.length === 0) {
         displayMessage("warning", "No favorites added", ".message-container");
+        clearButton.style.display = "none";
     } else {
         createHtml(favorites)
     }
     
 })()
 
-const clearButton = document.querySelector(".clear-button");
+
 clearButton.addEventListener("click", () => {
     clearAllFavs(articleKey);
     document.querySelector(".article-container").innerHTML = "";

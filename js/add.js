@@ -1,6 +1,6 @@
 import createNav from "./common/createNav.js";
 import displayMessage from "./common/displayMessage.js";
-import { baseUrl } from "./settings/baseUrl.js";
+import { baseUrl, urlKey } from "./settings/baseUrl.js";
 import { tokenKey } from "./settings/key.js";
 import { getFromStorage } from "./utils/storage.js";
 
@@ -17,7 +17,7 @@ const summary = document.querySelector("#summary");
 const author = document.querySelector("#author");
 const form = document.querySelector("form");
 
-const url = baseUrl + "cats";
+const url = baseUrl + urlKey;
 
 form.addEventListener("submit", submitForm);
 

@@ -1,4 +1,4 @@
-import { baseUrl } from "./settings/baseUrl.js";
+import { baseUrl, urlKey } from "./settings/baseUrl.js";
 
 import createNav from "./common/createNav.js";
 import createHtml from "./common/createHtml.js";
@@ -13,7 +13,7 @@ const input = document.querySelector("#search-box");
 // load all articles upon page load
 (async function() {
 
-    const url = baseUrl + "articles/";
+    const url = baseUrl + urlKey;
     
     try {
         const response = await fetch(url);
