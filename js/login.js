@@ -10,7 +10,6 @@ const message = document.querySelector(".message-container");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const form = document.querySelector("form");
-const inputs = document.querySelectorAll("input");
 
 message.innerHTML = "";
 
@@ -23,8 +22,7 @@ function submitForm(e) {
     const emailValue = email.value;
     const passwordValue = password.value;
 
-    // simple email and pass val
-
+    // simple email and password val
     if (emailValue.length > 3 && passwordValue.length > 1) {
         loginRequest(emailValue, passwordValue);
     } else {
@@ -56,6 +54,8 @@ async function loginRequest(emailValue, passwordValue) {
             location.href = "/index.html";
         } else {
             displayMessage("warning", "Invalid email and/or password", ".message-container");
+
+            // remove password value and error message upon pass input focus
             password.addEventListener("focusin", (e) => {
                 e.target.value = "";
                 message.innerHTML = "";

@@ -1,16 +1,11 @@
 import { handleStorage, getFromStorage } from "../utils/storage.js";
 import handleClick from "../utils/handleClick.js";
 import { articleKey } from "../settings/key.js";
-import displayMessage from "./displayMessage.js";
 
 const container = document.querySelector(".article-container");
 
 // create and render html to display
 export default function createHtml(json) {
-
-    if (json.length === 0) {
-        displayMessage("warning", "No books to display, please add a book", ".message-container");
-    }
 
     container.innerHTML = "";
 

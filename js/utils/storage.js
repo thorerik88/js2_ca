@@ -37,6 +37,7 @@ export async function handleStorage(id) {
 
                 if (existingList.length === 0 && location.pathname === pathname) {
                     displayMessage("warning", "You have removed all favorites", ".message-container");
+                    document.querySelector(".clear-button").style.display = "none";
                 }
                 if (location.pathname === pathname) {
                     createHtml(existingList);
