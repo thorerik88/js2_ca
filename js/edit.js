@@ -47,7 +47,7 @@ const form = document.querySelector("form");
                     summary.value = "";
                     author.value = "";
                 }
-                
+
             } else {
                 updateBook(e, title.value, summary.value, author.value)
             }
@@ -57,7 +57,7 @@ const form = document.querySelector("form");
         })
     }
     catch(error) {
-        console.log(error)
+        displayMessage("error", "Opps, something went wrong.</br> Error: " + error, ".message-container")
     }
     
 

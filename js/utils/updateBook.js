@@ -38,7 +38,7 @@ export default async function updateBook(e, title, summary, author) {
         displayMessage("success", `Book details successfully ${buttonPressed}`, ".message-container")
     }
     catch(error) {
-        console.log(error)
+        displayMessage("error", "Opps, something went wrong.</br> Error: " + error, ".message-container")
     }
 
 }
