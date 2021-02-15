@@ -12,10 +12,11 @@ const clearButton = document.querySelector(".clear-button");
 (async function() {
     const favorites = getFromStorage(articleKey);
     message.innerHTML = "";
+
     // display message if favs is empty
     if (favorites.length === 0) {
-        displayMessage("warning", "No favorites added", ".message-container");
         clearButton.style.display = "none";
+        displayMessage("warning", "No favorites added", ".message-container");
     } else {
         createHtml(favorites)
     }

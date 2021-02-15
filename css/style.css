@@ -45,6 +45,11 @@ button {
     opacity: 60%;
 }
 
+.nav .welcome {
+    color: #f0ad4e;
+    opacity: 1;
+}
+
 .search {
     display: flex;
 }
@@ -72,7 +77,6 @@ button {
 /* ARTICLES */
 
 .article {
-
     position: relative;
     background-color: white;
     padding: 1.5rem;
@@ -80,6 +84,10 @@ button {
     box-shadow: 2px 5px 5px rgba(0,0,0,.3);
     border-radius: 10px;
     max-width: 250px;
+}
+
+.article h1 {
+    width: 90%;
 }
 
 .article span {

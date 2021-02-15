@@ -36,7 +36,7 @@ export default function createNav() {
         // create, edit and delete as logged in
         addMenu = `<a href="/add.html" class="nav-link ${location.pathname === "/add.html" ? "active" : ""}">Add</a>`;
         editMenu = `<a href="/edit.html" class="nav-link ${location.pathname === "/edit.html" ? "active" : ""}">Edit</a>`;
-        welcome = `<a class="nav-link">Welcome ${user}</a>`;
+        welcome = `<a class="nav-link welcome">Welcome ${user}</a>`;
     }
 
     const container = document.querySelector(".nav");
@@ -52,7 +52,7 @@ export default function createNav() {
     <!-- login menu -->
     <div class="login col-10">
             <a href="/${logHref}.html" class="nav-link ${logoutClass}${location.pathname === "/login.html" ? "active" : ""}">${login}</a>
-            ${editMenu}
+            
             ${addMenu}
             ${welcome}
     </div>

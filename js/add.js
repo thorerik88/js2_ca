@@ -3,8 +3,13 @@ import displayMessage from "./common/displayMessage.js";
 import { baseUrl, urlKey } from "./settings/baseUrl.js";
 import { tokenKey } from "./settings/key.js";
 import { getFromStorage } from "./utils/storage.js";
+import updateBook from "./utils/updateBook.js";
 
 const token = getFromStorage(tokenKey);
+console.log(token)
+if (token.length === 0) {
+    location.href = "/index.html";
+}
 
 createNav();
 
