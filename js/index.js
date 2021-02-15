@@ -1,4 +1,4 @@
-import { baseUrl, urlKey } from "./settings/baseUrl.js";
+import { baseUrl, urlKey } from "./settings/url.js";
 
 import createNav from "./common/createNav.js";
 import createHtml from "./common/createHtml.js";

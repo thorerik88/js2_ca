@@ -1,4 +1,4 @@
-import { baseUrl, urlKey } from "../settings/baseUrl.js";
+import { baseUrl, urlKey } from "../settings/url.js";
 import { tokenKey } from "../settings/key.js";
 import { getFromStorage, updateStorage } from "./storage.js";
 import displayMessage from "../common/displayMessage.js";

@@ -1,7 +1,7 @@
 import createNav from "./common/createNav.js";
 import updateBook from "./utils/updateBook.js";
 import displayMessage from "./common/displayMessage.js";
-import { baseUrl, urlKey } from "./settings/baseUrl.js";
+import { baseUrl, urlKey } from "./settings/url.js";
 
 createNav();
 
@@ -15,7 +15,6 @@ if (!id) {
 }
 
 const url = baseUrl + urlKey + id;
-const message = document.querySelector(".message-container");
 const articleId = document.querySelector("#id");
 const title = document.querySelector("#title");
 const summary = document.querySelector("#summary");

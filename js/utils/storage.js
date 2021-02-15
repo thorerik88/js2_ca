@@ -1,6 +1,6 @@
 import createHtml from "../common/createHtml.js";
 import displayMessage from "../common/displayMessage.js";
-import { baseUrl, urlKey } from "../settings/baseUrl.js";
+import { baseUrl, urlKey } from "../settings/url.js";
 import { articleKey, tokenKey, userKey } from "../settings/key.js";
 
 let favorites = getFromStorage(articleKey);

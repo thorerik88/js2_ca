@@ -1,4 +1,4 @@
-import { baseUrl } from "./settings/baseUrl.js";
+import { baseUrl } from "./settings/url.js";
 
 import createNav from "./common/createNav.js";
 import displayMessage from "./common/displayMessage.js";
